@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 59530277}
   - component: {fileID: 59530276}
   m_Layer: 0
-  m_Name: Portal R1S0
+  m_Name: Portal R1S1S2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d48e0fd3bb9f494090ac805f969b7ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scenename: R1S0
+  scenename: R1S2
 --- !u!65 &59530277
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1242,31 +1242,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4308701973755986727, guid: 1e3ab7b8d1fdd9049b392d4b7be9fa4c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.1207519
+      value: 0.6898127
       objectReference: {fileID: 0}
     - target: {fileID: 4308701973755986727, guid: 1e3ab7b8d1fdd9049b392d4b7be9fa4c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.1207519
+      value: 0.6898127
       objectReference: {fileID: 0}
     - target: {fileID: 4308701973755986727, guid: 1e3ab7b8d1fdd9049b392d4b7be9fa4c, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.1207519
+      value: 0.6898127
       objectReference: {fileID: 0}
     - target: {fileID: 4308701973755986727, guid: 1e3ab7b8d1fdd9049b392d4b7be9fa4c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.66
+      value: -18.1
       objectReference: {fileID: 0}
     - target: {fileID: 4308701973755986727, guid: 1e3ab7b8d1fdd9049b392d4b7be9fa4c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.011029
+      value: -0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4308701973755986727, guid: 1e3ab7b8d1fdd9049b392d4b7be9fa4c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 17.39
+      value: -17.8
       objectReference: {fileID: 0}
     - target: {fileID: 4308701973755986727, guid: 1e3ab7b8d1fdd9049b392d4b7be9fa4c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4308701973755986727, guid: 1e3ab7b8d1fdd9049b392d4b7be9fa4c, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1274,7 +1274,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4308701973755986727, guid: 1e3ab7b8d1fdd9049b392d4b7be9fa4c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4308701973755986727, guid: 1e3ab7b8d1fdd9049b392d4b7be9fa4c, type: 3}
       propertyPath: m_LocalRotation.z
@@ -1286,11 +1286,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4308701973755986727, guid: 1e3ab7b8d1fdd9049b392d4b7be9fa4c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 4308701973755986727, guid: 1e3ab7b8d1fdd9049b392d4b7be9fa4c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5355624188974924933, guid: 1e3ab7b8d1fdd9049b392d4b7be9fa4c, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251982001290923939, guid: 1e3ab7b8d1fdd9049b392d4b7be9fa4c, type: 3}
+      propertyPath: mouseSensitivity
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465335817099445575, guid: 1e3ab7b8d1fdd9049b392d4b7be9fa4c, type: 3}
+      propertyPath: orthographic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465335817099445575, guid: 1e3ab7b8d1fdd9049b392d4b7be9fa4c, type: 3}
+      propertyPath: field of view
+      value: 55.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465335817099445575, guid: 1e3ab7b8d1fdd9049b392d4b7be9fa4c, type: 3}
+      propertyPath: m_FocalLength
+      value: 22.808249
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465335817099445575, guid: 1e3ab7b8d1fdd9049b392d4b7be9fa4c, type: 3}
+      propertyPath: m_projectionMatrixMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6599606892378565500, guid: 1e3ab7b8d1fdd9049b392d4b7be9fa4c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.422
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1836,7 +1864,7 @@ GameObject:
   - component: {fileID: 1378315629}
   - component: {fileID: 1378315633}
   m_Layer: 0
-  m_Name: Portal R1S2
+  m_Name: Portal R1S1S0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1940,7 +1968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d48e0fd3bb9f494090ac805f969b7ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scenename: R1S2
+  scenename: R1S0
 --- !u!1 &1540578872
 GameObject:
   m_ObjectHideFlags: 0
