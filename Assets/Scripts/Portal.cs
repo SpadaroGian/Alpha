@@ -5,17 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class Portal : MonoBehaviour
 {
-    public string scenename;
-    public string exitName;
-    //public Vector3 arrival;
+    /*public Vector3 arrival;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("RealPlayer"))
         {
-            PlayerPrefs.SetString("LastExitName", exitName);
-            SceneManager.LoadScene(scenename);
-            //PlayerScript.instance.transform.position = arrival;
+            Debug.Log(other.gameObject.transform.position);
+            other.gameObject.transform.position = arrival;
+            Debug.Log(other.gameObject.transform.position);
         }
-    }
+    }*/
 }
