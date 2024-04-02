@@ -17259,7 +17259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AskForCode: {fileID: 1559343735}
   CodeEntered: {fileID: 1299567039}
-  correctCode: 1234
+  correctCode: 7352
 --- !u!1 &2079365810
 GameObject:
   m_ObjectHideFlags: 0
