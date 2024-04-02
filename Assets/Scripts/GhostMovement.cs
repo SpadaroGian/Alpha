@@ -6,6 +6,9 @@ public class GhostMovement : MonoBehaviour
 {
     public Vector3 ghostPosition;
     public float ghostSpeed;
+
+    public float limitWall;
+    public string salle;
     private Vector3 initialPosition;
 
     // Start is called before the first frame update
@@ -18,10 +21,19 @@ public class GhostMovement : MonoBehaviour
     void Update()
     {
         transform.position += ghostPosition * ghostSpeed * Time.deltaTime;
-
-        if (transform.position.z <= -50)
+        if (salle == "S2")
         {
-            transform.position = initialPosition;
+            if (transform.position.x <= limitWall)
+            {
+                transform.position = initialPosition;
+            }
+        }
+        if (salle == "S3")
+        {
+            if (transform.position.z <= limitWall)
+            {
+                transform.position = initialPosition;
+            }
         }
     }
 }

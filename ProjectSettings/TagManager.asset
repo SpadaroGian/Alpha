@@ -6,6 +6,7 @@ TagManager:
   tags:
   - RealPlayer
   - Portal
+  - Ghost
   layers:
   - Default
   - TransparentFX
