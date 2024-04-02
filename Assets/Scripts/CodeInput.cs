@@ -38,12 +38,11 @@ public class CodeInput : MonoBehaviour
                 {
                     Debug.Log("correct");
                     AskForCode.text = "Correct";
-                    if (other.gameObject.transform.parent != null)
-                    {
-                        Debug.Log("level1pass");
-                        other.gameObject.transform.parent.GetComponent<PlayerMovement>().level1pass = true;
-                        Debug.Log(other.gameObject.transform.parent.GetComponent<PlayerMovement>().level1pass);
-                    }
+
+                    Debug.Log("level1pass");
+                    other.gameObject.GetComponent<PlayerMovement>().level1pass = true;
+                    Debug.Log(other.gameObject.GetComponent<PlayerMovement>().level1pass);
+
                     
                 }
                 else

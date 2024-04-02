@@ -102,6 +102,7 @@ public class PlayerMovement : MonoBehaviour
             this.playerhp -= 1;
             if (this.playerhp <= 0)
             {
+
                 Object.Destroy(this.gameObject);
             }
         }
