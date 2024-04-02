@@ -92,7 +92,7 @@ public class PlayerMovement : MonoBehaviour
             if (other.gameObject.name == "Portal R1R0")
             {
                 Debug.Log("tp1");
-                this.transform.position = new Vector3(-42.5f, 0f, 2.5f);
+                this.transform.position = new Vector3(-52.5f, 0f, 25f);
                 portalEntered = true;
 
                 StartCoroutine(ResetPortalEntered());
