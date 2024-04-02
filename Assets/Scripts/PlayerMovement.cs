@@ -19,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
 
     bool portalEntered = false;
 
+    public int playerhp = 3;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Portal"))
@@ -71,6 +73,15 @@ public class PlayerMovement : MonoBehaviour
                 portalEntered = true;
 
                 StartCoroutine(ResetPortalEntered());
+            }
+        }
+        if (other.gameObject.tag == "Ghost")
+        {
+            Debug.Log("gh");
+            this.playerhp -= 1;
+            if (this.playerhp <= 0)
+            {
+                Object.Destroy(this.gameObject);
             }
         }
     }
