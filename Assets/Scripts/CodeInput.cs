@@ -41,18 +41,24 @@ public class CodeInput : MonoBehaviour
 
                     Debug.Log("level1pass");
                     other.gameObject.GetComponent<PlayerMovement>().level1pass = true;
-                    Debug.Log(other.gameObject.GetComponent<PlayerMovement>().level1pass);
-
                     
+                    Debug.Log(other.gameObject.GetComponent<PlayerMovement>().level1pass);
                 }
                 else
                 {
-                    
+                    //other.gameObject.GetComponent<PlayerMovement>().playerhp -= 1;
                     Debug.Log("incorrect");
                     AskForCode.text = "Wrong code";
                     CodeEntered.text = "";
                 }
             }
+
+            if (other.gameObject.GetComponent<PlayerMovement>().playerhp <= 0) 
+            {
+                CodeEntered.gameObject.SetActive(false);
+                AskForCode.gameObject.SetActive(false);
+            }
+
         }
     }
 

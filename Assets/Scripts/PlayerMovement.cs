@@ -24,11 +24,13 @@ public class PlayerMovement : MonoBehaviour
 
     public bool level1pass = false;
 
-    public TMP_Text Endscreen;
+    public TMP_Text thxfordemo;
+    public TMP_Text gameover;
 
     private void Start()
     {
-        Endscreen.gameObject.SetActive(false);
+        thxfordemo.gameObject.SetActive(false);
+        gameover.gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -73,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
                 this.transform.position = new Vector3(200f, 0f, -25f);
                 portalEntered = true;
 
-                Endscreen.gameObject.SetActive(true);
+                thxfordemo.gameObject.SetActive(true);
 
                 StartCoroutine(ResetPortalEntered());
 
@@ -100,11 +102,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("gh");
             this.playerhp -= 1;
-            if (this.playerhp <= 0)
-            {
-
-                Object.Destroy(this.gameObject);
-            }
+            
         }
     }
 
@@ -137,6 +135,12 @@ public class PlayerMovement : MonoBehaviour
             velocity.y += gravity * Time.deltaTime;
 
             controller.Move(velocity * Time.deltaTime);
+
+            if (this.playerhp <= 0)
+            {
+                gameover.gameObject.SetActive(true);
+                Object.Destroy(this.gameObject);
+            }
         }
     }
 }
