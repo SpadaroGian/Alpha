@@ -56,6 +56,22 @@ public class PlayerMovement : MonoBehaviour
 
                 StartCoroutine(ResetPortalEntered());
             }
+            if (other.gameObject.name == "Portal R0R1")
+            {
+                Debug.Log("tp");
+                this.transform.position = new Vector3(-17.5f, 0f, -17.5f);
+                portalEntered = true;
+
+                StartCoroutine(ResetPortalEntered());
+            }
+            if (other.gameObject.name == "Portal R1R0")
+            {
+                Debug.Log("tp1");
+                this.transform.position = new Vector3(-42.5f, 0f, 2.5f);
+                portalEntered = true;
+
+                StartCoroutine(ResetPortalEntered());
+            }
         }
     }
 
