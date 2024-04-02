@@ -1,51 +1,65 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using System.Collections;
-using System.Collections.Generic;
 
 public class CodeInput : MonoBehaviour
 {
-    public GameObject AskForCode;
+    public TMP_Text AskForCode;
     public TMP_InputField CodeEntered;
     public string correctCode = "1234";
 
     private void Start()
     {
-        AskForCode.SetActive(false);
+        AskForCode.gameObject.SetActive(false);
         CodeEntered.gameObject.SetActive(false);
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "RealPlayer")
+        {
+            AskForCode.text = "Press enter to submit code";
+        }
+    }
 
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "RealPlayer")
         {
-            string enteredCode = CodeEntered.text;
 
             CodeEntered.gameObject.SetActive(true);
-            AskForCode.SetActive(true);
+            AskForCode.gameObject.SetActive(true);
 
-            if (Input.GetKeyDown(KeyCode.Return))
+
+            if (Input.GetKey(KeyCode.Return))
             {
                 Debug.Log("enter");
-                if (enteredCode == correctCode)
+                if (CodeEntered.text == correctCode)
                 {
                     Debug.Log("correct");
+                    AskForCode.text = "Correct";
+                    if (other.gameObject.transform.parent != null)
+                    {
+                        Debug.Log("level1pass");
+                        other.gameObject.transform.parent.GetComponent<PlayerMovement>().level1pass = true;
+                        Debug.Log(other.gameObject.transform.parent.GetComponent<PlayerMovement>().level1pass);
+                    }
+                    
                 }
                 else
                 {
-                    Debug.Log(enteredCode);
+                    
+                    Debug.Log("incorrect");
+                    AskForCode.text = "Wrong code";
+                    CodeEntered.text = "";
                 }
             }
-
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
         CodeEntered.gameObject.SetActive(false);
-
-        AskForCode.SetActive(false);
+        AskForCode.gameObject.SetActive(false);
     }
 }

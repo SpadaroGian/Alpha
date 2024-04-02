@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -21,11 +22,19 @@ public class PlayerMovement : MonoBehaviour
 
     public int playerhp = 3;
 
+    public bool level1pass = false;
+
+    public TMP_Text Endscreen;
+
+    private void Start()
+    {
+        Endscreen.gameObject.SetActive(false);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Portal"))
         {
-            Debug.Log("tp1");
             if (other.gameObject.name == "Portal R1S1S2")
             {
                 Debug.Log("tp");
@@ -57,6 +66,18 @@ public class PlayerMovement : MonoBehaviour
                 portalEntered = true;
 
                 StartCoroutine(ResetPortalEntered());
+            }
+            if (other.gameObject.name == "Portal R1R2" && level1pass)
+            {
+                Debug.Log("R2");
+                this.transform.position = new Vector3(200f, 0f, -25f);
+                portalEntered = true;
+
+                Endscreen.gameObject.SetActive(true);
+
+                StartCoroutine(ResetPortalEntered());
+
+
             }
             if (other.gameObject.name == "Portal R0R1")
             {
