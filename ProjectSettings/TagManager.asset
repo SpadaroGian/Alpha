@@ -7,11 +7,12 @@ TagManager:
   - RealPlayer
   - Portal
   - Ghost
+  - RealGhost
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - 

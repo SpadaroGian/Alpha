@@ -27,10 +27,15 @@ public class PlayerMovement : MonoBehaviour
     public TMP_Text thxfordemo;
     public TMP_Text gameover;
 
+    public TMP_Text lives;
+
+    public bool canbehit = true;
+
     private void Start()
     {
         thxfordemo.gameObject.SetActive(false);
         gameover.gameObject.SetActive(false);
+        lives.gameObject.SetActive(true);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -76,6 +81,7 @@ public class PlayerMovement : MonoBehaviour
                 portalEntered = true;
 
                 thxfordemo.gameObject.SetActive(true);
+                lives.gameObject.SetActive(false);
 
                 StartCoroutine(ResetPortalEntered());
 
@@ -104,6 +110,13 @@ public class PlayerMovement : MonoBehaviour
             this.playerhp -= 1;
             
         }
+        if (other.gameObject.tag == "RealGhost")
+        {
+            Debug.Log("realgh");
+            this.playerhp -= 1;
+            canbehit = false;
+            StartCoroutine(ResetHit());
+        }
     }
 
     private IEnumerator ResetPortalEntered()
@@ -112,8 +125,15 @@ public class PlayerMovement : MonoBehaviour
         portalEntered = false;
     }
 
+    private IEnumerator ResetHit()
+    {
+        yield return new WaitForSeconds(1f); // Adjust the delay time as needed
+        canbehit = true;
+    }
+
     void Update()
     {
+        this.lives.text = "Lives Remaining: " + this.playerhp.ToString();
         if (!portalEntered)
         {
             isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
@@ -138,6 +158,7 @@ public class PlayerMovement : MonoBehaviour
 
             if (this.playerhp <= 0)
             {
+                lives.gameObject.SetActive(false);
                 gameover.gameObject.SetActive(true);
                 Object.Destroy(this.gameObject);
             }
