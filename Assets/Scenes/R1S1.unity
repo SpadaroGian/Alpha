@@ -708,7 +708,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a9f6cb7bb266e24b8ad30f1e030b691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 718847661}
 --- !u!65 &40274123
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6030,7 +6030,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7c8c77c3be56435499b55c68291b4278, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 69223093a00e8a545872f45b6a199bf2, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -6788,7 +6788,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7c8c77c3be56435499b55c68291b4278, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 87fece2049816064781cde547ff60c94, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -7215,7 +7215,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4308701973755986727, guid: 1e3ab7b8d1fdd9049b392d4b7be9fa4c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.5
+      value: -51.3
       objectReference: {fileID: 0}
     - target: {fileID: 4308701973755986727, guid: 1e3ab7b8d1fdd9049b392d4b7be9fa4c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7223,7 +7223,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4308701973755986727, guid: 1e3ab7b8d1fdd9049b392d4b7be9fa4c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -17.5
+      value: -28.37
       objectReference: {fileID: 0}
     - target: {fileID: 4308701973755986727, guid: 1e3ab7b8d1fdd9049b392d4b7be9fa4c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10875,7 +10875,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7c8c77c3be56435499b55c68291b4278, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 693afc5dfbefe7e40a80da274125a85d, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -12938,7 +12938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a9f6cb7bb266e24b8ad30f1e030b691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 655729653}
 --- !u!65 &1393912631
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13110,7 +13110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a9f6cb7bb266e24b8ad30f1e030b691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1142092397}
 --- !u!65 &1414143638
 BoxCollider:
   m_ObjectHideFlags: 0
