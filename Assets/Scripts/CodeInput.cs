@@ -6,7 +6,7 @@ public class CodeInput : MonoBehaviour
 {
     public TMP_Text AskForCode;
     public TMP_InputField CodeEntered;
-    public string correctCode = "1234";
+    public string correctCode = "0000";
 
     private void Start()
     {

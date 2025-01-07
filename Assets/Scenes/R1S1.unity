@@ -3595,7 +3595,7 @@ GameObject:
   - component: {fileID: 350912810}
   - component: {fileID: 350912809}
   m_Layer: 0
-  m_Name: 3
+  m_Name: O
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7315,15 +7315,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4308701973755986727, guid: 1e3ab7b8d1fdd9049b392d4b7be9fa4c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -51.3
+      value: 107.768
       objectReference: {fileID: 0}
     - target: {fileID: 4308701973755986727, guid: 1e3ab7b8d1fdd9049b392d4b7be9fa4c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: -1.461
       objectReference: {fileID: 0}
     - target: {fileID: 4308701973755986727, guid: 1e3ab7b8d1fdd9049b392d4b7be9fa4c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -28.37
+      value: 18.14
       objectReference: {fileID: 0}
     - target: {fileID: 4308701973755986727, guid: 1e3ab7b8d1fdd9049b392d4b7be9fa4c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8420,7 +8420,7 @@ GameObject:
   - component: {fileID: 826661126}
   - component: {fileID: 826661125}
   m_Layer: 0
-  m_Name: 5
+  m_Name: N
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9485,6 +9485,7 @@ GameObject:
   - component: {fileID: 986078653}
   - component: {fileID: 986078655}
   - component: {fileID: 986078654}
+  - component: {fileID: 986078656}
   m_Layer: 5
   m_Name: Camera
   m_TagString: Untagged
@@ -9570,6 +9571,50 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &986078656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986078652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!1 &993314724
 GameObject:
   m_ObjectHideFlags: 0
@@ -9583,7 +9628,7 @@ GameObject:
   - component: {fileID: 993314726}
   - component: {fileID: 993314725}
   m_Layer: 0
-  m_Name: 7
+  m_Name: T
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10448,7 +10493,7 @@ GameObject:
   - component: {fileID: 1081992659}
   - component: {fileID: 1081992658}
   m_Layer: 0
-  m_Name: 2
+  m_Name: Y
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19406,7 +19451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AskForCode: {fileID: 1559343735}
   CodeEntered: {fileID: 1299567039}
-  correctCode: 7352
+  correctCode: TONY
 --- !u!1 &2079365810
 GameObject:
   m_ObjectHideFlags: 0
