@@ -1,30 +1,40 @@
-Shader "Unlit/fog"
+using UnityEngine;
+
+public class SunLightController : MonoBehaviour
 {
-    Properties
+    public Light sun; 
+    public Gradient sunColor;
+    public AnimationCurve sunIntensity; 
+
+    [Header("Time Settings")]
+    [Range(0, 24)] public float timeOfDay = 12f; 
+    public float dayLengthInSeconds = 120f; 
+
+    private float timeMultiplier; 
+
+    void Start()
     {
-        
+        timeMultiplier = 24f / dayLengthInSeconds; 
     }
-    SubShader
+
+    void Update()
     {
-        Tags { "RenderType"="Opaque" "RenderPipeline" = "UniversalPipeline"}
-
-        Pass
+        timeOfDay += Time.deltaTime * timeMultiplier;
+        if (timeOfDay >= 24f)
         {
-            HLSLPROGRAM
-            #pragma vertex Vert
-            #pragma fragment frag
+            timeOfDay -= 24f; 
+        }
+        UpdateSunLight();
+    }
 
-            #pragma multi_compile_fog
-
-            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
-            #include "Packages/com.unity.render-pipelines.core/Runtime/Utilities/Blit.hlsl"
-            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/DeclareDepthTexture.hlsl"
-
-            half4 frag(Varyings IN) : SV_Target
-            {
-                return 1.0 - SAMPLE_TEXTURE2D(_BlitTexture, sampler_LinearClamp, IN.texcoord);
-            }
-            ENDHLSL
+    void UpdateSunLight()
+    {
+        if (sun != null)
+        {
+            float sunAngle = (timeOfDay / 24f) * 360f - 90f;
+            sun.transform.rotation = Quaternion.Euler(sunAngle, 170f, 0f);
+            sun.color = sunColor.Evaluate(timeOfDay / 24f);
+            sun.intensity = sunIntensity.Evaluate(timeOfDay / 24f);
         }
     }
 }
