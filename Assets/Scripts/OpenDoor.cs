@@ -51,6 +51,10 @@ public class OpenDoor : MonoBehaviour
                 StartCoroutine(WaitDoor());
                 
             }
+            if (this.name == "r2text")
+            {
+                Debug.Log("cccccccccccc");
+            }
         }
     }
 

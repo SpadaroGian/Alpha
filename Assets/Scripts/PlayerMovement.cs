@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
 
     public TMP_Text thxfordemo;
     public TMP_Text gameover;
+    public TMP_Text loreinf1;
 
     public TMP_Text lives;
 
@@ -35,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
     {
         thxfordemo.gameObject.SetActive(false);
         gameover.gameObject.SetActive(false);
+        loreinf1.gameObject.SetActive(false);
         lives.gameObject.SetActive(true);
     }
 
@@ -117,7 +119,22 @@ public class PlayerMovement : MonoBehaviour
             canbehit = false;
             StartCoroutine(ResetHit());
         }
+        if (other.gameObject.tag == "R2Text")
+        {
+            loreinf1.gameObject.SetActive(true);
+        }
+
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "R2Text")
+        {
+            loreinf1.gameObject.SetActive(false);
+        }
+    }
+
+    
 
     private IEnumerator ResetPortalEntered()
     {
