@@ -9,6 +9,8 @@ TagManager:
   - Ghost
   - RealGhost
   - R2Text
+  - Grabbable
+  - Pickable
   layers:
   - Default
   - TransparentFX
