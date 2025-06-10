@@ -53,7 +53,7 @@ public class PickupSystem : MonoBehaviour
             if (closest != null)
             {
                 // Show prompt
-                pickupPromptText.text = $"Press X/A to pick up {closest.name}";
+                pickupPromptText.text = $"Press X (B) to pick up {closest.name} and Y (N) to drop it";
 
                 if (pickupPressed)
                 {
